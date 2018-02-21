@@ -1,0 +1,159 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Flash Bitácora- Silvia y Eleyne</title>
+  <link rel="stylesheet" href="vendors/materialize/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="shortcut icon" type="image/x-icon" href="assets/FLOR.ico">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+
+  <!-- Just an image -->
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#!" class="brand-logo center">Flash Bitácora</a>
+
+    </div>
+  </nav>
+  <!-- Fixed Action Button -->
+  <div class="fixed-action-btn horizontal">
+    <a class="btn-floating btn-large red">
+        <i class="large material-icons">mode_edit</i>
+      </a>
+    <ul>
+      <li><a class="btn-floating cyan accent-3 waves-effect waves-light btn modal-trigger" href="#modal1"><i class="material-icons">chat</i></a></li>
+      <li><a class="btn-floating blue waves-effect waves-light btn modal-trigger" href="#modal2"><i class="material-icons">perm_media</i></a></li>
+      <li><a class="btn-floating green waves-effect waves-light btn modal-trigger" href="#modal3"><i class="material-icons">today</i></a></li>
+      <li><a class="btn-floating yellow waves-effect waves-light btn modal-trigger" href="#modal4"><i class="material-icons">video_library</i></a></li>
+    </ul>
+  </div>
+  <!-- Fin de Fixed Action Button -->
+  <div class="row">
+    <div class="col s10 offset-s1 m6 offset-m3">
+        <div id="containermsm"></div> 
+        
+    </div>
+  </div>
+  <!-- Modal Structure Mensaje -->
+  <div id="modal1" class="modal">
+    <div class="row">
+      <div class="input-field col s10 offset-s1">
+        <input id="title" type="text" class="validate">
+        <label for="title">Título</label>
+      </div>
+    </div>
+
+    <div class="row">
+      <form class="col s12">
+        <div class="row">
+          <div class="input-field col s10 offset-s1">
+            <textarea id="message" class="materialize-textarea"></textarea>
+            <label for="message">Mensaje</label>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <div class="modal-footer">
+      <a id="btn-enviar" class="waves-effect  modal-close waves-light btn"><i class="material-icons right">send</i>Enviar</a>
+    </div>
+  </div>
+  <!-- Fin del Modal Structure Mensaje -->
+
+<!-- Modal Structure imagen -->
+<div id="modal2" class="modal">
+    <div class="row">
+      <div class="input-field col s10 offset-s1">
+        <input id="title" type="text" class="validate">
+        <label for="title">Título</label>
+      </div>
+    </div>
+    <!-- <a class="waves-effect waves-light btn">IMAGEN</a>
+    <p>Archivos:<br><input type="file" name="archivos" id="archivos"></p> -->
+    <form action="#">
+        <div class="file-field input-field">
+          <div class="btn">
+            <span>IMAGEN</span>
+            <input type="file" id="archivos">
+          </div>
+          <div class="file-path-wrapper">
+            <input class="file-path validate" type="text">
+          </div>
+        </div>
+      </form>    
+
+    <div class="modal-footer">
+      <a id = "enviarimg"class="waves-effect modal-close waves-light btn amber lighten-1"><i class="material-icons right">send</i>Publicar</a>
+    </div>
+  </div>
+  <!-- Fin del Modal Structure viceo -->
+  <!-- Modal Structure date -->
+  <div id="modal3" class="modal">
+    <div class="row">
+      <div class="input-field col s10 offset-s1">
+        <input id="last_name" type="text" class="validate">
+        <label for="last_name">Título</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s10 offset-s1">
+       <input id="date" type="date" class="datepicker" placeholder="¿En que fecha se realizó el evento?">
+        
+      </div>
+    </div>
+
+    <div class="modal-footer">
+      <a id="btndate"class="waves-effect modal-close waves-light btn"><i class="material-icons right">send</i>Publicar</a>
+    </div>
+  </div>
+  <!-- Fin del Modal Structure Date -->
+  <!-- Modal Structure video -->
+  <div id="modal4" class="modal">
+    <div class="row">
+      <div class="input-field col s10 offset-s1">
+        <input id="last_name" type="text" class="validate">
+        <label for="last_name">Título</label>
+      </div>
+    </div>
+    <form action="#">
+      <div class="file-field input-field">
+        <div class="btn">
+          <span>AUDIO / VIDEO</span>
+          <input type="file" id="audvid">
+        </div>
+        <div class="file-path-wrapper">
+          <input class="file-path validate" type="text">
+        </div>
+      </div>
+    </form>    
+
+    <div class="modal-footer">
+      <a id="btnaudvid"class="waves-effect waves-light btn amber lighten-1"><i class="material-icons right">send</i>Publicar</a>
+    </div>
+  </div>
+  
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDqEVuT9g4BqrEVSi-8DAwlAAG5_8memgg&callback=initMap&libraries=places">
+  </script>
+  <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <!-- Materialize -->
+  <script type="text/javascript" src="vendors/materialize/js/materialize.min.js"></script>
+  <script type="text/javascript" src="js/map.js"></script>
+  <script type="text/javascript" src="js/post.js"></script>
+  <script type="text/javascript" src="js/img.js"></script>
+  <script type="text/javascript" src="js/date.js"></script>
+  <script type="text/javascript" src="js/video.js"></script>
+  <script type="text/javascript" src="js/app.js"></script>
+  
+  
+  
+  
+</body>
+
+</html>
