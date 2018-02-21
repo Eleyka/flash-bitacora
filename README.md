@@ -1,9 +1,9 @@
-# LINKEDLN 
+#Flash BITÁCORA 
 
 
 ## Objetivo:
 
-* Aprender el uso del API de LinkedIn
+* Practicando
 
 ![](public/assets/1.PNG)
 ![](public/assets/2.PNG)
